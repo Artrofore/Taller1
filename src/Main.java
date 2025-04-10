@@ -26,7 +26,7 @@ public class Menu {
                     System.out.println(">> Opción: Crear una matriz.");
                     // Lógica para crear matriz
                     ;
-                    boolean validarDimensiones(int filas, int cols) ;
+                    boolean validarDimensiones(int filas, int cols);
                     break;
                 case 2:
                     System.out.println("Opción: Llamar matriz.");
