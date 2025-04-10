@@ -1,6 +1,7 @@
 import java.util.Scanner;
+import java.util.Random;
 
-void menu {
+class void menu{
 
     private static Scanner scanner = new Scanner(System.in);
 
@@ -24,16 +25,13 @@ void menu {
             switch (opcion) {
                 case 1:
                     System.out.println(">> Opción: Crear una matriz.");
-                    // Lógica para crear matriz
-                    ;
-                    boolean validarDimensiones(int filas, int cols);
-                    int [ ][ ] crearMatriz(int filas, in cols);
-                    main(int matriz [ ][ ]) {
-                }
+                    pedirDimensiones();
+                    validarDimensiones();
+                    crearMatriz();
+                    llenarMatriz();
                     break;
                 case 2:
                     System.out.println("Opción: Llamar matriz.");
-                    // Lógica para llamar matriz
 
                     ;
                     break;
@@ -75,14 +73,72 @@ void menu {
 
 }
 void mostrarFila(int matriz[ ][ ], int fila) {
-
 }
-int [ ][ ] crearMatriz(int filas, in cols) {
-
-}
-boolean validarDimensiones(int filas, int cols) {
 
 }
 boolean matrizCero(int matriz[ ][ ] ) {
     
+
+}
+public static void main(String[] args) {
+
+    int[] dimensiones = pedirDimensiones();
+    int filas = dimensiones[0];
+    int columnas = dimensiones[1];
+
+
+    if (validarDimensiones(filas, columnas)) {
+
+        int[][] matriz = crearMatriz(filas, columnas);
+
+
+        llenarMatriz(matriz);
+        mostrarMatriz(matriz);
+    } else {
+        System.out.println("Las dimensiones no son válidas. Asegúrese de que filas y columnas sean mayores que 0.");
+    }
+}
+
+
+public static int[] pedirDimensiones() {
+    System.out.print("Ingrese el número de filas: ");
+    int filas = scanner.nextInt();
+
+    System.out.print("Ingrese el número de columnas: ");
+    int columnas = scanner.nextInt();
+
+    return new int[]{filas, columnas};
+}
+
+
+public static boolean validarDimensiones(int filas, int columnas) {
+    if (filas > 0 && columnas > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+public static int[][] crearMatriz(int filas, int columnas) {
+    return new int[filas][columnas];
+}
+
+public static void llenarMatriz(int[][] matriz) {
+    for (int i = 0; i < matriz.length; i++) {
+        for (int j = 0; j < matriz[i].length; j++) {
+            matriz[i][j] = random.nextInt(10);
+        }
+    }
+}
+
+public static void mostrarMatriz(int[][] matriz) {
+    System.out.println("\nMatriz generada:");
+    for (int i = 0; i < matriz.length; i++) {
+        for (int j = 0; j < matriz[i].length; j++) {
+            System.out.print(matriz[i][j] + "\t");
+        }
+        System.out.println();
+    }
+}
 }
