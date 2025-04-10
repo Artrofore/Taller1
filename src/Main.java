@@ -42,7 +42,6 @@ class void menu{
                     break;
                 case 4:
                     System.out.println("Opción: Verificar si la matriz es 0.");
-                    // Lógica para verificar matriz nula
 
                     break;
                 case 5:
@@ -54,7 +53,7 @@ class void menu{
             }
         }
     }
-           aaaaaaaaaaaaaaaaa
+          //aaaaaaaaaaaaaaaaa
     private static int leerOpcionMenu() {
         while (true) {
             System.out.print("Seleccione una opción: ");
@@ -77,9 +76,18 @@ void mostrarFila(int matriz[ ][ ], int fila) {
 
 }
 boolean matrizCero(int matriz[ ][ ] ) {
-    
+  for (int i = 0; i < matriz.length; i++) {
+      for (int j = 0; j < matriz[i].length; j++) {
+          totalElementos++;
+          if (matriz[i][j] == 0) {
+              contadorCeros++;
+              {
 
-}
+              }
+
+          }
+      }
+  }
 public static void main(String[] args) {
 
     int[] dimensiones = pedirDimensiones();
