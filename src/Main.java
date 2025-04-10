@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Menu {
+void menu {
 
     private static Scanner scanner = new Scanner(System.in);
 
@@ -27,10 +27,14 @@ public class Menu {
                     // Lógica para crear matriz
                     ;
                     boolean validarDimensiones(int filas, int cols);
+                    int [ ][ ] crearMatriz(int filas, in cols);
+                    main(int matriz [ ][ ]) {
+                }
                     break;
                 case 2:
                     System.out.println("Opción: Llamar matriz.");
                     // Lógica para llamar matriz
+
                     ;
                     break;
                 case 3:
@@ -65,4 +69,20 @@ public class Menu {
             }
         }
     }
+}
+
+<tipo> llenarMatriz(int matriz [ ][ ] ) {
+
+}
+void mostrarFila(int matriz[ ][ ], int fila) {
+
+}
+int [ ][ ] crearMatriz(int filas, in cols) {
+
+}
+boolean validarDimensiones(int filas, int cols) {
+
+}
+boolean matrizCero(int matriz[ ][ ] ) {
+    
 }
